@@ -11,6 +11,7 @@ import zw.co.tjchidanika.contentmanager.dto.ContentSaveRequest;
 import zw.co.tjchidanika.contentmanager.dto.ContentUpdateRequest;
 import zw.co.tjchidanika.contentmanager.exception.FileNotFoundException;
 import zw.co.tjchidanika.contentmanager.exception.FileStorageException;
+import zw.co.tjchidanika.contentmanager.exception.ObjectNotFoundExceptionHandler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -146,10 +147,9 @@ public class FileStorageService {
     private void deleteFileFromDir(String fileName) {
         try {
             Path filePath = this.fileStorageLocation.resolve(fileName).normalize();
-            System.out.println("TJC" + filePath);
             Files.deleteIfExists(filePath);
         } catch (IOException ex) {
-            throw new FileStorageException("Could not delete file " + fileName + ". Please try again!", ex);
+            throw new ObjectNotFoundExceptionHandler("Could not delete file " + fileName + ". Please try again!", ex.getMessage(),ex.toString());
         }
     }
 

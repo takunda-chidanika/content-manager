@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import zw.co.tjchidanika.contentmanager.dto.ContentResponse;
 import zw.co.tjchidanika.contentmanager.dto.ContentSaveRequest;
 import zw.co.tjchidanika.contentmanager.dto.ContentUpdateRequest;
+import zw.co.tjchidanika.contentmanager.exception.ObjectNotFoundExceptionHandler;
 import zw.co.tjchidanika.contentmanager.model.Content;
 import zw.co.tjchidanika.contentmanager.repository.ContentRepository;
 
@@ -58,12 +59,17 @@ public class ContentStorageService {
 
     // Get By Id
     public ContentResponse getById(String id) {
-        return Content.toResponse(contentRepository.findById(id).orElseThrow());
+        return Content.toResponse(contentRepository.findById(id).orElseThrow(
+                () -> new ObjectNotFoundExceptionHandler("Content/File", "id", id)
+        ));
     }
 
     // Update
     public ContentResponse update(ContentUpdateRequest request) {
-        Content content = contentRepository.findById(request.getId()).orElseThrow();
+        Content content = contentRepository.findById(request.getId()).orElseThrow(
+                () -> new ObjectNotFoundExceptionHandler("Content/File", "id", request.getId())
+
+        );
 
         content.setFilename(request.getFilename());
         content.setUrl(request.getUrl());
