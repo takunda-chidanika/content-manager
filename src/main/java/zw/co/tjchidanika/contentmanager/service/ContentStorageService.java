@@ -1,12 +1,12 @@
-package zw.co.musika.contentmanager.service;
+package zw.co.tjchidanika.contentmanager.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import zw.co.musika.contentmanager.dto.ContentResponse;
-import zw.co.musika.contentmanager.dto.ContentSaveRequest;
-import zw.co.musika.contentmanager.dto.ContentUpdateRequest;
-import zw.co.musika.contentmanager.model.Content;
-import zw.co.musika.contentmanager.repository.ContentRepository;
+import zw.co.tjchidanika.contentmanager.dto.ContentResponse;
+import zw.co.tjchidanika.contentmanager.dto.ContentSaveRequest;
+import zw.co.tjchidanika.contentmanager.dto.ContentUpdateRequest;
+import zw.co.tjchidanika.contentmanager.model.Content;
+import zw.co.tjchidanika.contentmanager.repository.ContentRepository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package zw.co.musika.contentmanager.dto;
+package zw.co.tjchidanika.contentmanager.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

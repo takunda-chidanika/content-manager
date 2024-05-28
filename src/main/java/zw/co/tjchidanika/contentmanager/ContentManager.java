@@ -1,4 +1,4 @@
-package zw.co.musika.contentmanager;
+package zw.co.tjchidanika.contentmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

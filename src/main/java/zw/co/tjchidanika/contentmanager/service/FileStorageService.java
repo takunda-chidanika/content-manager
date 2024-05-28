@@ -1,16 +1,16 @@
-package zw.co.musika.contentmanager.service;
+package zw.co.tjchidanika.contentmanager.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import zw.co.musika.contentmanager.config.FileStorageProperties;
-import zw.co.musika.contentmanager.dto.ContentResponse;
-import zw.co.musika.contentmanager.dto.ContentSaveRequest;
-import zw.co.musika.contentmanager.dto.ContentUpdateRequest;
-import zw.co.musika.contentmanager.exception.FileNotFoundException;
-import zw.co.musika.contentmanager.exception.FileStorageException;
+import zw.co.tjchidanika.contentmanager.config.FileStorageProperties;
+import zw.co.tjchidanika.contentmanager.dto.ContentResponse;
+import zw.co.tjchidanika.contentmanager.dto.ContentSaveRequest;
+import zw.co.tjchidanika.contentmanager.dto.ContentUpdateRequest;
+import zw.co.tjchidanika.contentmanager.exception.FileNotFoundException;
+import zw.co.tjchidanika.contentmanager.exception.FileStorageException;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

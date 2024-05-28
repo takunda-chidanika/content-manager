@@ -1,4 +1,4 @@
-package zw.co.musika.contentmanager.config;
+package zw.co.tjchidanika.contentmanager.config;
 
 import lombok.Getter;
 import lombok.Setter;

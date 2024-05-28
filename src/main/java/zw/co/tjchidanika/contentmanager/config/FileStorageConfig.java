@@ -1,4 +1,4 @@
-package zw.co.musika.contentmanager.config;
+package zw.co.tjchidanika.contentmanager.config;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

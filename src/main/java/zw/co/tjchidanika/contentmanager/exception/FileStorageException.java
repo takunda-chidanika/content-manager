@@ -1,4 +1,4 @@
-package zw.co.musika.contentmanager.exception;
+package zw.co.tjchidanika.contentmanager.exception;
 
 import java.io.Serial;
 

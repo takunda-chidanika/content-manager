@@ -1,4 +1,4 @@
-package zw.co.musika.contentmanager.dto;
+package zw.co.tjchidanika.contentmanager.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,8 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class ContentUpdateRequest {
-    private String id;
+public class ContentSaveRequest {
     private String filename;
     private String url;
     private String type;

@@ -1,4 +1,4 @@
-package zw.co.musika.contentmanager.model;
+package zw.co.tjchidanika.contentmanager.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import zw.co.musika.contentmanager.dto.ContentResponse;
+import zw.co.tjchidanika.contentmanager.dto.ContentResponse;
 
 import java.time.LocalDateTime;
 import java.util.List;
