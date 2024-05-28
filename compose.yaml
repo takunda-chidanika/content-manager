@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: 'postgres:16.1'
+    environment:
+      - 'POSTGRES_DB=content_db'
+      - 'POSTGRES_PASSWORD=content_password'
+      - 'POSTGRES_USER=content_user'
+    ports:
+      - '5432:5432'
+
+  nginx:
+    image: nginx:1.25.3-alpine
+    ports:
+      - '9191:80'
+    volumes:
+      - ./uploads:/usr/share/nginx/html
