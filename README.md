@@ -1,10 +1,10 @@
-Sure! Below is an example of a README file for your Content Manager System/Service project developed with Spring Boot, using Java 21, Docker for the database, and an Nginx Docker image for rendering files.
+Here's an updated README file that includes the information about your project and its endpoints as shown in the Swagger UI screenshot.
 
 ```markdown
 # Content Manager System/Service
 
 ## Overview
-This project is a Content Manager System/Service developed using Spring Boot. It utilizes Java version 21 and leverages Docker for managing the database and a Nginx Docker image for rendering files.
+This project is a Content Manager System/Service developed using Spring Boot. It utilizes Java version 21 and leverages Docker for managing the database and an Nginx Docker image for rendering files.
 
 ## Features
 - **Spring Boot** for application development.
@@ -75,8 +75,51 @@ This project is a Content Manager System/Service developed using Spring Boot. It
     ```
 
 6. **Access the application:**
-    - The Spring Boot application will run on `http://localhost:8080`.
+    - The Spring Boot application will run on `http://localhost:9090`.
     - The Nginx server will serve static files on `http://localhost:8080`.
+
+## API Endpoints
+
+### File Controller
+
+- **Upload Multiple Files**
+  - **POST** `/api/v1/file/upload-files`
+  - Description: Upload multiple files.
+  - Request: Multipart form data containing the files.
+
+- **Upload Single File**
+  - **POST** `/api/v1/file/upload-file`
+  - Description: Upload a single file.
+  - Request: Multipart form data containing the file.
+
+- **Update File**
+  - **PATCH** `/api/v1/file/update-file`
+  - Description: Update an existing file.
+  - Request: Multipart form data containing the file and old filename.
+
+- **Get Files**
+  - **GET** `/api/v1/file/get-files`
+  - Description: Retrieve a list of all files.
+
+- **Get File by ID**
+  - **GET** `/api/v1/file/get-file/{id}`
+  - Description: Retrieve a file by its ID.
+  - Parameters: `id` (path parameter) - The ID of the file.
+
+- **Download File**
+  - **GET** `/api/v1/file/downloadFile/{fileName}`
+  - Description: Download a file by its filename.
+  - Parameters: `fileName` (path parameter) - The name of the file to download.
+
+- **Delete Multiple Files**
+  - **DELETE** `/api/v1/file/delete-files`
+  - Description: Delete multiple files.
+  - Request: JSON body containing the list of file IDs.
+
+- **Delete File by ID**
+  - **DELETE** `/api/v1/file/delete-file/{id}`
+  - Description: Delete a file by its ID.
+  - Parameters: `id` (path parameter) - The ID of the file to delete.
 
 ## Configuration
 - **Database Configuration:** Update the `application.properties` or `application.yml` file in `src/main/resources` with your database settings:
@@ -92,13 +135,16 @@ This project is a Content Manager System/Service developed using Spring Boot. It
 ## Usage
 
 1. **Creating Content:**
-    - Access the `/create` endpoint to create new content.
-  
+    - Access the `/api/v1/file/upload-file` endpoint to upload new content.
+
 2. **Managing Content:**
-    - Access the `/manage` endpoint to edit or delete existing content.
+    - Access the `/api/v1/file/update-file` endpoint to edit existing content.
+    - Access the `/api/v1/file/delete-file/{id}` endpoint to delete content.
 
 3. **Viewing Content:**
-    - Access the `/view` endpoint to view the content.
+    - Access the `/api/v1/file/get-files` endpoint to view all files.
+    - Access the `/api/v1/file/get-file/{id}` endpoint to view a specific file.
+    - Access the `/api/v1/file/downloadFile/{fileName}` endpoint to download a file.
 
 ## Contributing
 Contributions are welcome! Please fork this repository and create a pull request with your changes. Ensure your code adheres to the project's coding standards and includes relevant tests.
@@ -108,14 +154,14 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 For any inquiries or support, please contact [your-email@example.com].
-
 ```
 
 ### Explanation
 
-- **Overview**: Briefly describe the project and its main technologies.
+- **Overview**: Briefly describes the project and its main technologies.
 - **Features**: Lists key features of the project.
 - **Getting Started**: Provides detailed steps to set up and run the project.
+- **API Endpoints**: Lists all API endpoints as shown in the Swagger UI with descriptions and request parameters.
 - **Configuration**: Guides on configuring the database and Nginx.
 - **Usage**: Explains how to use the system endpoints.
 - **Contributing**: Encourages contributions with a brief guide.
