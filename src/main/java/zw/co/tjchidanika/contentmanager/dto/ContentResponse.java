@@ -18,6 +18,6 @@ public class ContentResponse {
     private String id;
     private String filaName;
     private String url;
-    private String fileType;
     private long size;
+    private String fileType;
 }
